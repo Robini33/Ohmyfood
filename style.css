@@ -11,8 +11,9 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     margin:0px;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -21,4 +22,49 @@ header{
     text-align: center;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     padding: 0.3rem;
+    margin: 0px;
+    position: relative;
+}
+
+main .city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: rgb(77, 76, 76);
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.register{
+    text-align: center;
+}
+
+.register h2{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.register p{
+    font-size: 1rem;
+}
+
+
+.register button{
+    color: white;
+    font-weight: bold;
+    font-size: 1.rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 2px 1px 16px -3px #000000;
+    background-image: linear-gradient(to top, rgb(231, 131, 210), rgb(238, 104, 220));
+    transition: 200ms;
+    margin-top: 1rem;
+}
+
+.register button:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
 }
