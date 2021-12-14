@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood-p3",
+  "version": "1.0.0",
+  "description": "Mon projet OC 3 ohmyfoof",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robini33/Ohmyfood.git"
+  },
+  "author": "Robin inizan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robini33/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Robini33/Ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.45.0"
+  }
+}
