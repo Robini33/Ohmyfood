@@ -1,22 +1,23 @@
 {
-  "name": "ohmyfood-p3",
-  "version": "1.0.0",
-  "description": "Mon projet OC 3 ohmyfoof",
-  "main": "index.js",
+  "name": "node-sass",
+  "version": "0.1.0",
+  "description": "p3 sass",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "node-sass scss/style.scss css/style.css",
+    "watch": "node-sass scss/style.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Robini33/Ohmyfood.git"
   },
-  "author": "Robin inizan",
-  "license": "ISC",
+  "author": "Robin INIZAN",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Robini33/Ohmyfood/issues"
   },
   "homepage": "https://github.com/Robini33/Ohmyfood#readme",
   "devDependencies": {
-    "sass": "^1.45.0"
+    "node-sass": "^7.0.1"
   }
 }

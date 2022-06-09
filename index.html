@@ -14,6 +14,7 @@
       <!-- NAVBAR -->
     
     <body>
+      <div class="loader"></div>
       <header>
         <h1>ohmyfood</h1>
       </header>   
@@ -27,7 +28,7 @@
         <section class="register">
           <h2>Réservez le menu qui <br> vous convient</h2>
           <p>Découvrez des restaurants d'exception, <br> séléctionnés par nos soins.</p>
-          <a href="#Restaurants"><button>Explorez nos restaurants</button></a>
+          <a href="#Restaurants"><button>Explorer nos restaurants</button></a>
         </section>
 
       <!-- Fonctionnement -->
@@ -45,38 +46,47 @@
             
         <div class="restaurant" id="Restaurants">
           <h2>Restaurants</h2>
-          <div class="restaurant-flex">
+            <div class="restaurant-flex">
               <div class="restaurant-card">
-                <a href="./pages/resto-1.html" class="href">
+                <a href="./pages/resto-1.html" class="card new">
                   <div class="restaurant-card-image">
                   <img src="assets/restaurants/1jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="palette">
                   </div>
-                  <h3><strong>La palette du goût</strong></h3>
+                </a>
+                  <div class="restau-description">
+                  <h3>La palette du goût</h3>
                   <p>Ménilmontant</p>
+                  </div>
+                
+              </div>
+              <div class="restaurant-card">
+                <a href="./pages/resto-1.html" class="card new">
+                  <div class="restaurant-card-image">
+                  <img src="assets/restaurants/2stil-u2Lp8tXIcjw-unsplash.jpg" alt="enchantée">
+                  </div>
+                  <h3>La note enchantée</h3>
+                  <p>Charonne</p>
                 </a>
               </div>
-            <div class="restaurant-card">
-                <div class="restaurant-card-image">
-                  <img src="assets/restaurants/2stil-u2Lp8tXIcjw-unsplash.jpg" alt="enchantée">
-                </div>
-                <h3><strong>La note enchantée</strong></h3>
-                <p>Charonne</p>
-            </div>
-            <div class="restaurant-card">
-              <div class="restaurant-card-image">
-                <img src="assets/restaurants/3toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="française">
+              <div class="restaurant-card">
+                <a href="./pages/resto-1.html" class="card">
+                  <div class="restaurant-card-image">
+                  <img src="assets/restaurants/3toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="française">
+                  </div>
+                  <h3>A la française</h3>
+                  <p>Cité Rouge</p>
+                </a>
               </div>
-                <h3><strong>A la française</strong></h3>
-                <p>Cité Rouge</p>
-            </div>
-            <div class="restaurant-card">
-              <div class="restaurant-card-image">
-                <img src="assets/restaurants/4louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="délice">
+              <div class="restaurant-card">
+                <a href="./pages/resto-1.html" class="card">
+                  <div class="restaurant-card-image">
+                  <img src="assets/restaurants/4louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="délice">
+                  </div>
+                  <h3>Le délice des sens</h3>
+                  <p>Folie-Méricourt</p>
+                </a>
               </div>
-                <h3><strong>Le délice des sens</strong></h3>
-                <p>Folie-Méricourt</p>
-           </div>
-          </div>
+            </div>
         </div>
       </main>
 
@@ -94,7 +104,7 @@
           </p>
           <p>Mentions légales</p>
           <p>
-            <a href="robin.inizan@gmail.com">Contact</a>
+            <a href="mailto:robin.inizan@gmail.com">Contact</a>
           </p>
       </footer>
     </body>
