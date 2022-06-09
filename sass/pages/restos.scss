@@ -1,0 +1,202 @@
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#page-resto {
+    header {
+        &:hover::before {
+            transform: translateY(-50%) scale(1.2);
+        }
+        &::before {
+            display: inline-block;
+            position: absolute;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f060";
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            transition: transform 200ms;
+        }
+    }
+    
+    
+  .banner img {
+    display: block;
+    height: 70vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+    
+   .resto__title {
+    margin-top: -3rem;
+    h2 {
+     font-family: "Shrikhand", "cursive";
+     padding: 2rem 1rem;
+     position: relative;
+     border-radius: 2rem 2rem 0 0;
+     background-color: #f6f6f6;
+    }
+    &::before {
+        display: inline-block;
+        position: absolute;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        content: "\f004";
+        font-size: 2rem;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: inherit;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 1;
+        transition: all 200ms ease-in-out;
+    }
+    &h2::after {
+        display: inline-block;
+        position: absolute;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f004";
+        font-size: 2rem;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+        background-image: linear-gradient(to top, #9356dc, #ff79da);
+    }
+    &h2:hover::after {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
+    }    
+}
+    
+   .resto-main {
+    padding: 0 1rem;
+  }
+   .menus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        }
+        h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+        position: relative;
+        margin-bottom: 1rem;
+        &::after {
+         content: "";
+         position: absolute;
+         top: 1.5rem;
+         left: 0;
+         height: 0.25rem;
+         width: 3rem;
+         background-color: #99e2d0;
+       }
+    }
+    .menus__category {
+     overflow: hidden;
+
+      .menu-item {
+        $numberOfItems: 3;
+        @for $i from 1 through $numberOfItems {
+          &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+          }
+        }
+        display: flex;
+        background-color: white;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin: 0.5rem;
+        box-shadow: 2px 1px 8px -3px #7e7e7e;
+        animation: appear 1s;
+        animation-fill-mode: both;
+
+        .menu-item__price {
+          margin-left: auto;
+          font-weight: 900;
+          padding: 1rem;
+          display: flex;
+          align-items: flex-end;
+        }
+        .menu-item__description {
+          padding: 1rem;
+          overflow: hidden;
+          h4,
+          p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+        .menu-item__check {
+          display: grid;
+          place-items: center;
+          flex-shrink: 0;
+          $button-width: 4rem;
+          border-radius: 0 1rem 1rem 0;
+          background-color:#99e2d0;
+          margin-right: -1 * $button-width;
+          width: $button-width;
+          transition: margin-right 0.5s;
+          i {
+            $size: 1rem;
+            display: grid;
+            place-items: center;
+            background: white;
+            height: $size;
+            width: $size;
+            border-radius: 1rem;
+            color: #99e2d0;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+          .menu-item__check {
+            margin-right: 0;
+          }
+          i {
+            @keyframes quarterspin {
+                0% {
+                  transform: rotate(-270deg);
+                }
+                100% {
+                  transform: rotate(0);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
